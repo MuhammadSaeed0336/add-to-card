@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ADD TO CARD</title>
+    <link rel="stylesheet" href="card.css">
+  </head>
+  <body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 gx-3">
+                    <!-- left side div  -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4">
+                            <h2 class="py-4">Cart (2 items)</h2>
+                            <div class="row">
+                                <!-- images -->
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-item-center shadow product_img">
+                                    <img src="pic.jpg" alt="not found">
+                                </div>
+                                <!-- details -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- names details -->
+                                        <div class="col-6 card_title">
+                                            <h1 class="mb-4 product_name">Train</h1>
+                                            <p class="mb-2">TRAIN - YELLOW</p>
+                                            <p class="mb-2">COLOR - YELLOW</p>
+                                            <p class="mb-2">SIZE - 2ft </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item"><button class="page-link" href="#" onclick="decreaseNum('textbox', 'itemval')"><i class="fas fa-minus"></i></button></li>
+                                                <li class="page-item"><input class="page-link" href="#" type="text" name="" value="0" id="textbox"></li>
+                                                <li class="page-item"><button class="page-link" href="#" onclick="increaseNum('textbox', 'itemval')"><i class="fas fa-plus"></i></button></li>                                            
+                                              </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove move and price  -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish_move">
+                                             <p><li class="fas fa-trash-alt"> REMOVE ITEM</li></p>
+                                             <p><li class="fas fa-heart"> MOVE TO WISH LIST</li></p>                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$<span id="itemval">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- second card -->
+                        <div class="card p-4">
+                            <div class="row">
+                                <!-- images -->
+                                <div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-item-center shadow product_img">
+                                    <img src="pic2.jpg" alt="not found">
+                                </div>
+                                <!-- details -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- names details -->
+                                        <div class="col-6 card_title">
+                                            <h1 class="mb-4 product_name">Train</h1>
+                                            <p class="mb-2">TRAIN - RED</p>
+                                            <p class="mb-2">COLOR - RED</p>
+                                            <p class="mb-2">SIZE - 2ft </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set_quantity">
+                                                <li class="page-item"><button class="page-link" href="#" onclick="decreaseNum('textbox1', 'itemval1')"><i class="fas fa-minus"></i></button></li>
+                                                <li class="page-item"><input class="page-link" href="#" type="text" name="" value="0" id="textbox1"></li>
+                                                <li class="page-item"><button class="page-link" href="#" onclick="increaseNum('textbox1', 'itemval1')"><i class="fas fa-plus"></i></button></li>                                            
+                                              </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove move and price  -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish_move">
+                                             <p><li class="fas fa-trash-alt"> REMOVE ITEM</li></p>
+                                             <p><li class="fas fa-heart"> MOVE TO WISH LIST</li></p>                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price_money">
+                                            <h3>$<span id="itemval1">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right side div  -->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">The Total Amount of</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Product amount</p>
+                                <p>$<span id="product_total_amt">0.00</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shipping Charge</p>
+                                <p>$<span id="shipping_charge">50.0</span></p>
+                            </div>
+                            <hr>
+                            <div class="total_amt d-flex justify-content-between ">
+                               <b><p>The total amount of (including VAT)</p>
+                                <p>$<span id="total_cart_amt">0.00</span></b></p>
+                            </div>
+                            <button class="btn btn-primary text-uppercase">checkout</button>
+                        </div>
+                        <!-- discount card part -->
+                        <div class="discount_code mt-3 shadow">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a class="d-flex justify-content-between" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        Add a discount code (optional)<span><li class="fas fa-chevron-down pt-1"></li></span>
+                                    </a>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="mt-3">
+                                            <input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="Enter the discount code">
+                                            <small id="error_trw" class="text-dark mt-3">Code is MrSSK</small>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- discount card part end -->
+                        <div class="mt-3 shadow bg-white p-3">
+                            <div class="pt-4">
+                                <h5 class="mb-4">Expected delivery date</h5>
+                                <p>January 9 2023 - January 14 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="card.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
